@@ -1,0 +1,311 @@
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Wait N Rest
+    Description: Rediseñando el nuevo confort
+    Author: Gregoris Pereira
+    Web: www.venetronic.com
+    Email: deivyp@gmail.com
+    Version: 1.0
+    Scala Ration: 1013x1783
+    Reduction: 506x890
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Grid 
+	02. Theme
+	04. Footer
+
+-----------------------------------------------------------------------------------*/
+/*===========================
+    1. COMMON css 
+===========================*/
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins Regular';
+  color:white;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    height: 100%;
+}
+.grid-container-paid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    height: 100%;
+}
+.Header { grid-area: 1 / 1 / 2 / 6; }
+.Footer { grid-area: 5 / 1 / 6 / 6; }
+.Container { grid-area: 2 / 2 / 5 / 5; }
+.Container-Paid-Two {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+gap: 0px 0px;
+grid-template-areas:
+    "Container-Title Container-Title Container-Title"
+    "Container-Option Container-Option Container-Option"
+    ". . ."
+    ". . ."
+    ". . ."
+    ". . ."
+    "Container-Action Container-Action Container-Action";
+grid-area: 2 / 2 / 5 / 5;
+}
+.Container-Paid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 0px;
+    grid-template-areas:
+    "Container-Title Container-Title Container-Title"
+    "Container-Option Container-Option Container-Option"
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+    "Container-Action Container-Action Container-Action";
+    grid-area: 2 / 2 / 5 / 5;
+}
+.Container-Title { grid-area: Container-Title; }
+.Container-Option { grid-area: Container-Option; }
+.Container-Action { grid-area: Container-Action; }
+.Footer-Star { grid-area: 5 / 1 / 6 / 2; }
+.Footer-End { grid-area: 5 / 5 / 6 / 6; }
+.Header-Start { grid-area: 1 / 1 / 2 / 2; }
+.Header-End { grid-area: 1 / 5 / 2 / 6; }
+.Header-Center { grid-area: 1 / 2 / 2 / 5; }
+.Footer-Center { grid-area: 5 / 2 / 6 / 5; }
+
+.Footer-action{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+}
+body {
+    background: #121118;
+}
+
+section {
+    background: linear-gradient(180deg, #2E2A37 0%, #191721 100%);
+    height: 100vh;
+}
+
+h1 {
+    font-size: 6vw;
+    text-align: center;
+    color: #FFFFFF;
+}
+h2{
+    font-size: 3.2vw;
+    font-weight: 100;
+    color: #C8C8C8;
+}
+h3{
+    font-size: 2.8vw;
+    font-weight: 100;
+    color: #C8C8C8;
+}
+.button-circle {
+    border: 2px solid #4F4A59;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 55px;
+    margin-top: 2vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.button-circle:hover,
+.button-circle:active,
+.button-circle:link,
+.button-circle:visited,
+.button-giant:hover,
+.button-giant:active,
+.button-giant:link,
+.button-giant:visited {
+    background: #463543;
+}
+
+.btn-medium {
+    width: 70%;
+    margin: 2vh auto;
+}
+.btn-small {
+    width: 25%;
+    height: 4.4vh;
+    padding: 0px 5px;
+}
+
+.button-icon {
+    display: inline-block;
+    margin-top: 1vh;
+}
+
+.button-text-end {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    margin-right: 20px;
+    font-size: 1.5vh;
+}
+
+.button-text-center {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.img-80 {
+    width: 80%;
+}
+
+.button-giant {
+    border: solid 2px #4F4A59;
+    border-radius: 50%;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.button-giant img {
+    display: block;
+    margin: auto;
+}
+
+.image-center{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -20px;
+}
+
+.keyboard-number{
+    width: 13vw;
+    height: 13vw;
+    border-radius: 50%;
+    background: #463543;
+    display: block;
+    margin: 0 auto;
+    line-height: 7vh;
+    font-size: 4vw;
+}
+.keyboard-number:hover,
+.keyboard-number:active,
+.keyboard-number:link,
+.keyboard-number:visited,
+.keyboard-number-white:hover,
+.keyboard-number-white:active,
+.keyboard-number-white:link,
+.keyboard-number-white:visited{
+    background: #6A6771;
+}
+.keyboard-number-white{
+    width: 13vw;
+    height: 13vw;
+    border-radius: 50%;
+    border: solid 1px #4F4A59;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.keyboard-icon{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+.input-digit{
+    background-color: #121118;
+    display: inline-block;
+    width: 16%;
+    height: 4vh;
+    border-radius: 30%;
+    margin-left: 10px;
+    color: #F1C844;
+    font-size: 3vh;
+    text-align: center;
+    border-style: none;
+}
+.input-digit-large{
+    background-color: #121118;
+    display: inline-block;
+    width: 81%;
+    height: 4vh;
+    /* border-radius: 4%; */
+    margin-left: 10px;
+    color: #F1C844;
+    font-size: 3vh;
+    text-align: center;
+    border-style: none;
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+}
+.input-digit-img{
+    position: absolute;
+    margin-left: 10px;
+}
+.btn-dark{
+    background: #1A1822;
+    color: #F1C844;
+}
+.error{
+    color:red;
+}
+.error-input{
+    border:1px solid red;
+}
+.circle-img{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+.text-info{
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    font-size: 3.1vw;
+}
