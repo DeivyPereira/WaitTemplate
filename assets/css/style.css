@@ -56,6 +56,7 @@ h6 {
   padding: 0;
   font-family: 'Poppins Regular';
   color:white;
+  font-size: 3vw;
 }
 .grid-container {
     display: grid;
@@ -93,7 +94,7 @@ grid-area: 2 / 2 / 5 / 5;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px 0px;
+    gap: 1.5vh 0px;
     grid-template-areas:
     "Container-Title Container-Title Container-Title"
     "Container-Option Container-Option Container-Option"
@@ -134,6 +135,7 @@ h1 {
     font-size: 6vw;
     text-align: center;
     color: #FFFFFF;
+	font-weight: 400;
 }
 h2{
     font-size: 3.2vw;
@@ -141,12 +143,12 @@ h2{
     color: #C8C8C8;
 }
 h3{
-    font-size: 2.8vw;
+    font-size: 3.1vw;
     font-weight: 100;
     color: #C8C8C8;
 }
 .button-circle {
-    border: 2px solid #4F4A59;
+    border: 2px solid #3C3B3F;
     color: white;
     box-sizing: border-box;
     border-radius: 55px;
@@ -154,9 +156,11 @@ h3{
     height: 7vh;
     display: flex;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0vw 3vw;
 }
-
+a{
+    text-decoration: none;
+}
 .button-circle:hover,
 .button-circle:active,
 .button-circle:link,
@@ -173,14 +177,14 @@ h3{
     margin: 2vh auto;
 }
 .btn-small {
-    width: 25%;
     height: 4.4vh;
-    padding: 0px 5px;
+    padding: 0vw 2vw;
 }
 
 .button-icon {
-    display: inline-block;
-    margin-top: 1vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .button-text-end {
@@ -195,20 +199,22 @@ h3{
     display: inline-block;
     text-align: center;
     width: 100%;
+    padding: 2vw;
 }
 
 .img-80 {
-    width: 80%;
+    width: 5vw;
 }
 
 .button-giant {
     border: solid 2px #4F4A59;
     border-radius: 50%;
     text-align: center;
-    width: 110px;
-    height: 110px;
+    width: 15vw;
+    height: 15vw;
     display: flex;
     align-items: center;
+	margin-top: 8vh;
 }
 
 .button-giant img {
@@ -230,8 +236,10 @@ h3{
     background: #463543;
     display: block;
     margin: 0 auto;
-    line-height: 7vh;
     font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .keyboard-number:hover,
 .keyboard-number:active,
@@ -251,39 +259,42 @@ h3{
     display: flex;
     margin: 0 auto;
     align-items: center;
+	margin-left:0vw;
 }
 .keyboard-icon{
     display: block;
     margin: 0 auto;
-    width: 40%;
+    width: 30%;
 }
 .input-digit{
-    background-color: #121118;
+background-color: #121118;
     display: inline-block;
-    width: 16%;
-    height: 4vh;
-    border-radius: 30%;
+    width: 20%;
+    height: 5vh;
+    border-radius: 42%;
     margin-left: 10px;
     color: #F1C844;
     font-size: 3vh;
     text-align: center;
     border-style: none;
+    height: 5;
+    font-size: 4vw;
 }
 .input-digit-large{
     background-color: #121118;
     display: inline-block;
-    width: 81%;
-    height: 4vh;
-    /* border-radius: 4%; */
+    width: 95%;
+    height: 5vh;
+	font-family: 'Poppins Regular';
     margin-left: 10px;
     color: #F1C844;
-    font-size: 3vh;
+    font-size: 4vw;
     text-align: center;
     border-style: none;
-    border-bottom-left-radius: 1vh;
-    border-bottom-right-radius: 1vh;
-    border-top-left-radius: 1vh;
-    border-top-right-radius: 1vh;
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
 }
 .input-digit-img{
     position: absolute;
@@ -294,7 +305,7 @@ h3{
     color: #F1C844;
 }
 .error{
-    color:red;
+    color:#d84a4a;
 }
 .error-input{
     border:1px solid red;
@@ -307,5 +318,46 @@ h3{
 .text-info{
     margin-bottom: 2vh;
     margin-top: 2vh;
-    font-size: 3.1vw;
+    font-size: 3.7vw;
 }
+.btn-back{    
+	margin-left: 1vw;
+    width: 24vw;
+    height: 6vh;
+    font-size: 2.5vw;
+}
+.align-item-center{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal{
+    width: 50%;
+    margin: 0 auto;
+    background: #463543;
+    overflow-y: scroll;
+    padding: 6vh;
+    height: 60vh;
+}
+
+.select-option{
+    font-size: 3vw;
+    padding: 2vw 5vw;
+    background-color: black;
+    color: #bf9f3d;
+    border-radius: 1vh;
+}
+
+
+.keyboard-number-left{
+	margin-left:0vw;
+}
+
+.keyboard-number-right{
+	margin-right:0vw;
+}
+/*
+textarea:focus, input:focus{
+    outline: none;
+}*
