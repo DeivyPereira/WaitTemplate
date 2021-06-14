@@ -180,6 +180,10 @@ a{
     height: 4.4vh;
     padding: 0vw 2vw;
 }
+.btn-red{
+    background: #ED4133;
+    color:white
+}
 
 .button-icon {
     justify-content: center;
