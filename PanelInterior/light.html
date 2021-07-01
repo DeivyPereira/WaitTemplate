@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait N Rest</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <section style="padding: 5vw;">
+        <div class="Container-touch">
+            <div class="Language">
+                <div style="text-align: end;">
+                    <img src="../assets/img/flag/spain.png" style="margin-left: 3vw; width: 6vw;">
+                    <img src="../assets/img/flag/english.png" style="margin-left: 3vw; width: 6vw;">
+                </div>
+            </div>
+            <div class="Light">
+                <a href="light.html">
+                    <div class="touchButton touchButton-active">
+                        <img src="../assets/img/icons/ligth.png">
+                        <p class="touch-p">Luz</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Wifi">
+                <a href="wifi.html">
+                    <div class="touchButton">
+                        <img src="../assets/img/icons/wifi-touch.png">
+                        <p class="touch-p">Wifi</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Help">
+                <a href="help.html">
+                    <div class="touchButton">
+                        <img src="../assets/img/icons/help.png">
+                        <p class="touch-p">¿Como <br />
+                            funciona?</p>
+                    </div>
+                </a>
+            </div>
+            <div class="AC">
+                <a href="ac.html">
+                    <div class="touchButton">
+                        <p class="touch-p">AC</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Container-full-touch align-item-center">
+                <div>
+                    <div class="switch" id="switch1">
+                        <div class="switch-active" id="switch1-sun">
+                            <img src="../assets/img/icons/sun-active.png" >
+                        </div>
+                        <div class="switch-desactive" id="switch1-moon"> 
+                            <img src="../assets/img/icons/moon.png" >
+                        </div>
+                    </div>
+                    <div style="margin-top: 10vh;"></div>
+                    <div class="switch"  id="switch2">
+                        <div class="switch-active" id="switch2-sun">
+                            <img src="../assets/img/icons/lampara.png" >
+                        </div>
+                        <div class="switch-desactive" id="switch2-moon">
+                            <img src="../assets/img/icons/moon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+<script>
+    const switch1 = document.querySelector("#switch1");
+    const switch2 = document.querySelector("#switch2");
+    switch1.onclick = function () {
+        document.querySelector("#switch1-sun").classList.toggle("switch-active");
+        document.querySelector("#switch1-moon").classList.toggle("switch-desactive");
+        document.querySelector("#switch1-sun").classList.toggle("switch-desactive");
+        document.querySelector("#switch1-moon").classList.toggle("switch-active");
+    }
+    switch2.onclick = function () {
+        document.querySelector("#switch2-sun").classList.toggle("switch-active");
+        document.querySelector("#switch2-moon").classList.toggle("switch-desactive");
+        document.querySelector("#switch2-sun").classList.toggle("switch-desactive");
+        document.querySelector("#switch2-moon").classList.toggle("switch-active");
+    }
+</script>
+</html>

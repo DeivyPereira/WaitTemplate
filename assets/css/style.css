@@ -143,6 +143,7 @@ grid-area: 2 / 2 / 5 / 5;
     background-color: #463543;
     margin-top: 5vh;
     border-radius: 3vw; 
+    max-height: 60vh;
 }
 .Language { grid-area: Language; }
 .touchButton{
@@ -405,12 +406,14 @@ background-color: #121118;
 	margin-right:0vw;
 }
 .switch{
-    width: 17vh;
-    height: 6vh;
+    width: 20vh;
+    height: 8vh;
     background: black;
     border-radius: 2vw;
     padding: 1vw;
     display: inline-flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .switch-active{
     width: 50%;
@@ -420,6 +423,7 @@ background-color: #121118;
     justify-content: center;
     align-items: center;
     background-color: #463543;
+    
 }
 .switch-desactive{
     width: 50%;
@@ -428,6 +432,22 @@ background-color: #121118;
     justify-content: center;
     align-items: center;
 }
-.switch-icon{
-    width: 40%;
+
+.switch-desactive img{
+    filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+}
+.switch-yellow{
+    color: #F1C844;
+    margin-top: 1vh;
+    font-size: 3.5vw;
+}
+
+.switch-button-opacity{
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.switch-button-opacity:active{
+    cursor: pointer;
+    opacity: 1;
 }
