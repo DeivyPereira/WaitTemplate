@@ -122,6 +122,49 @@ grid-area: 2 / 2 / 5 / 5;
     justify-content: center;
     gap: 2vh;
 }
+.Container-touch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 2.6fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". Language"
+        "Light Wifi"
+        "Help AC"
+        "Container-full-touch Container-full-touch";
+    height: 95%;
+}
+.Light { grid-area: Light; }
+.Wifi { grid-area: Wifi; }
+.Help { grid-area: Help; }
+.AC { grid-area: AC; }
+.Container-full-touch { 
+    grid-area: Container-full-touch;
+    background-color: #463543;
+    margin-top: 5vh;
+    border-radius: 3vw; 
+}
+.Language { grid-area: Language; }
+.touchButton{
+    background-color: #1F1C26;
+    height: 80%;
+    border-radius: 3vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 5vw 2vw;
+    color: white;
+    opacity: 0.5;
+}
+.touchButton-active{
+    background-color: #463543;
+    opacity: 1;
+    border-bottom: 0.3vh solid #F1C844;
+}
+.touch-p{
+    margin-left: 2vw;
+}
 body {
     background: #121118;
 }
@@ -361,7 +404,30 @@ background-color: #121118;
 .keyboard-number-right{
 	margin-right:0vw;
 }
-/*
-textarea:focus, input:focus{
-    outline: none;
-}*
+.switch{
+    width: 17vh;
+    height: 6vh;
+    background: black;
+    border-radius: 2vw;
+    padding: 1vw;
+    display: inline-flex;
+}
+.switch-active{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    border-radius: 2vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #463543;
+}
+.switch-desactive{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switch-icon{
+    width: 40%;
+}
